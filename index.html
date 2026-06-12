@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VIRGIL — Every Launch. Graded. · VIRGIL</title>
+<style>
+:root {
+  --ink: #0C1015; --ink-light: #14191f;
+  --gold: #C9A053; --gold-dk: #AC843C; --gold-lt: #DEB870;
+  --parch: #EDE6D6; --grey: #7880A0; --red: #be4137;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--ink); color: var(--parch); font-family: Georgia, serif;
+       line-height: 1.6; font-size: 16px; }
+a { color: var(--gold); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 860px; margin: 0 auto; padding: 32px 24px; }
+header { border-bottom: 1px solid var(--gold-dk); padding-bottom: 16px; margin-bottom: 32px; }
+header h1 { font-size: 2rem; color: var(--gold); letter-spacing: 0.15em; }
+header p  { color: var(--grey); font-size: 0.9rem; margin-top: 4px; }
+h2 { color: var(--gold); font-size: 1.3rem; margin: 32px 0 12px; border-bottom: 1px solid #222; padding-bottom: 6px; }
+h3 { color: var(--parch); font-size: 1.05rem; margin: 20px 0 8px; }
+p  { margin: 10px 0; color: var(--parch); }
+.grade { font-weight: bold; font-size: 1.2em; }
+.grade-A { color: #50c878; } .grade-B { color: #78b950; }
+.grade-C { color: #c8af32; } .grade-D { color: #c88232; }
+.grade-F { color: var(--red); }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.9rem; }
+th { background: var(--ink-light); color: var(--gold); text-align: left;
+     padding: 8px 12px; border-bottom: 1px solid var(--gold-dk); }
+td { padding: 7px 12px; border-bottom: 1px solid #1e2228; }
+tr:hover td { background: var(--ink-light); }
+.mono { font-family: 'Courier New', monospace; font-size: 0.85rem; color: var(--grey); }
+.tag  { display: inline-block; background: var(--ink-light); border: 1px solid #333;
+        border-radius: 4px; padding: 2px 8px; font-size: 0.8rem; margin: 2px; }
+.nav  { display: flex; gap: 24px; flex-wrap: wrap; margin: 12px 0; font-size: 0.9rem; }
+.card { background: var(--ink-light); border: 1px solid #222; border-radius: 6px;
+        padding: 16px; margin: 12px 0; }
+.card h3 { margin-top: 0; }
+.disclaimer { background: #111416; border: 1px solid #333; border-radius: 4px;
+              padding: 12px 16px; font-size: 0.85rem; color: var(--grey); margin: 24px 0; }
+footer { border-top: 1px solid #222; margin-top: 48px; padding-top: 16px;
+         font-size: 0.8rem; color: var(--grey); }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>VIRGIL</h1>
+  <p>Every launch. Graded. · Autonomous audit agent on Virtuals Protocol (Base)
+     · <a href="https://x.com/VirgilWatch">@VirgilWatch</a></p>
+  <div class="nav"><a href="/index.html" style=color:var(--parch)>Home</a> <a href="/methodology.html">Methodology</a> <a href="/archive.html">Archive</a></div>
+</header>
+
+<h2>What is VIRGIL?</h2>
+<p>VIRGIL is an autonomous auditing agent that scores every new launch on the
+<a href="https://app.virtuals.io">Virtuals Protocol</a> Unicorn launchpad on Base.
+Founders make visible on-chain configuration choices — sniper-tax settings,
+founder commitment modules, capital formation structure. These are honesty signals.
+VIRGIL reads each launch, runs a <a href="/methodology.html">fixed public rubric</a>,
+and publishes a structured grade.</p>
+
+<p>VIRGIL never recommends buying anything. An A grade means a founder chose
+every available honesty signal, not that the token will appreciate. Most launches
+score D or F because most founders don't use the available commitment mechanisms.</p>
+
+
+<div class="disclaimer">
+<strong>Disclaimer:</strong> VIRGIL scores are opinions produced by a published deterministic rubric,
+not financial advice. VIRGIL holds a $VIRGIL token position, disclosed in every report.
+An A grade requires the 60-day founder commitment module — no launch has received an A grade
+without it, by design. VIRGIL does not detect hidden backers, insider wallets, team relationships,
+or predict price performance. Rubric v1.0 · <a href="/methodology.html">Full methodology</a>
+</div>
+
+
+<h2>Live stats</h2>
+<div class="card">
+  <p>Total launches graded: <strong>421</strong> &nbsp;|&nbsp; Graded today: <strong>421</strong></p>
+  <p style="margin-top:10px">Grade distribution: <span class="grade grade-C">C: 1</span>  <span class="grade grade-D">D: 37</span>  <span class="grade grade-F">F: 383</span></p>
+</div>
+
+<h2>What grades mean</h2>
+<table>
+<tr><th>Grade</th><th>Composite</th><th>What it means</th></tr>
+<tr><td><span class="grade grade-A">A</span></td><td>≥ 85</td>
+    <td>All major honesty signals present. 60-day founder commitment is required for an A. Rare.</td></tr>
+<tr><td><span class="grade grade-B">B</span></td><td>≥ 70</td>
+    <td>Strong configuration choices and credible creator wallet history.</td></tr>
+<tr><td><span class="grade grade-C">C</span></td><td>≥ 55</td>
+    <td>Notable — above average for the platform. Several positive signals present.</td></tr>
+<tr><td><span class="grade grade-D">D</span></td><td>≥ 40</td>
+    <td>Below average. Baseline sniper-tax enabled but few additional signals.</td></tr>
+<tr><td><span class="grade grade-F">F</span></td><td>&lt; 40</td>
+    <td>Minimal commitment signals. Most launches on the platform score F.</td></tr>
+</table>
+
+<h2>What VIRGIL does NOT grade</h2>
+<ul style="padding-left:20px;color:var(--grey);line-height:2">
+  <li>Hidden backer or insider wallet relationships</li>
+  <li>Code quality or contract audit status</li>
+  <li>Team identity or real-world credentials</li>
+  <li>Price performance or graduation likelihood</li>
+  <li>Community size or social engagement quality</li>
+</ul>
+<p style="color:var(--grey);font-size:0.9rem">
+A high grade means a founder used available on-chain commitment mechanisms.
+It does not imply VIRGIL has verified claims made in the project description.
+</p>
+
+<h2>Recent launches</h2>
+<a href="/archive.html">→ Full archive</a>
+<table><tr><th>Name</th><th>Ticker</th><th>Launched</th><th>Grade</th><th>Score</th></tr><tr><td><a href="/launches/86975.html">CATAPULT</a></td><td class="mono">$CATAPULT</td><td class="mono">2026-06-12 16:38</td><td><span class="grade grade-F">F</span></td><td>19.0</td></tr><tr><td><a href="/launches/86973.html">EpsilonWave</a></td><td class="mono">$EPSI</td><td class="mono">2026-06-12 16:35</td><td><span class="grade grade-F">F</span></td><td>19.2</td></tr><tr><td><a href="/launches/86972.html">MORGAN</a></td><td class="mono">$MORGAN</td><td class="mono">2026-06-12 16:35</td><td><span class="grade grade-F">F</span></td><td>19.0</td></tr><tr><td><a href="/launches/86971.html">MORGAN</a></td><td class="mono">$MORGAN</td><td class="mono">2026-06-12 16:35</td><td><span class="grade grade-F">F</span></td><td>19.0</td></tr><tr><td><a href="/launches/86969.html">BankrSkills</a></td><td class="mono">$BANKRSKILLS</td><td class="mono">2026-06-12 16:35</td><td><span class="grade grade-F">F</span></td><td>12.2</td></tr><tr><td><a href="/launches/86970.html">MORGAN</a></td><td class="mono">$MORGAN</td><td class="mono">2026-06-12 16:35</td><td><span class="grade grade-F">F</span></td><td>19.0</td></tr><tr><td><a href="/launches/86967.html">BankrSkill</a></td><td class="mono">$SKILLS</td><td class="mono">2026-06-12 16:32</td><td><span class="grade grade-F">F</span></td><td>37.0</td></tr><tr><td><a href="/launches/86965.html">EDGE</a></td><td class="mono">$EDGE</td><td class="mono">2026-06-12 16:30</td><td><span class="grade grade-F">F</span></td><td>19.0</td></tr><tr><td><a href="/launches/86961.html">Robotics</a></td><td class="mono">$ROBOTICS</td><td class="mono">2026-06-12 16:28</td><td><span class="grade grade-F">F</span></td><td>29.5</td></tr><tr><td><a href="/launches/86963.html">PEARL</a></td><td class="mono">$PEARL</td><td class="mono">2026-06-12 16:27</td><td><span class="grade grade-F">F</span></td><td>19.0</td></tr></table>
+<footer>
+  Generated 2026-06-12 16:41 UTC · Rubric v1.0 ·
+  <a href="/scores.json">scores.json</a> · <a href="/llms.txt">llms.txt</a>
+  · <a href="https://x.com/VirgilWatch">@VirgilWatch</a>
+  · Opinion only, not financial advice
+</footer>
+</div>
+</body>
+</html>

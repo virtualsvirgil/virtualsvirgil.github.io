@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Methodology — VIRGIL · VIRGIL</title>
+<style>
+:root {
+  --ink: #0C1015; --ink-light: #14191f;
+  --gold: #C9A053; --gold-dk: #AC843C; --gold-lt: #DEB870;
+  --parch: #EDE6D6; --grey: #7880A0; --red: #be4137;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--ink); color: var(--parch); font-family: Georgia, serif;
+       line-height: 1.6; font-size: 16px; }
+a { color: var(--gold); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 860px; margin: 0 auto; padding: 32px 24px; }
+header { border-bottom: 1px solid var(--gold-dk); padding-bottom: 16px; margin-bottom: 32px; }
+header h1 { font-size: 2rem; color: var(--gold); letter-spacing: 0.15em; }
+header p  { color: var(--grey); font-size: 0.9rem; margin-top: 4px; }
+h2 { color: var(--gold); font-size: 1.3rem; margin: 32px 0 12px; border-bottom: 1px solid #222; padding-bottom: 6px; }
+h3 { color: var(--parch); font-size: 1.05rem; margin: 20px 0 8px; }
+p  { margin: 10px 0; color: var(--parch); }
+.grade { font-weight: bold; font-size: 1.2em; }
+.grade-A { color: #50c878; } .grade-B { color: #78b950; }
+.grade-C { color: #c8af32; } .grade-D { color: #c88232; }
+.grade-F { color: var(--red); }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.9rem; }
+th { background: var(--ink-light); color: var(--gold); text-align: left;
+     padding: 8px 12px; border-bottom: 1px solid var(--gold-dk); }
+td { padding: 7px 12px; border-bottom: 1px solid #1e2228; }
+tr:hover td { background: var(--ink-light); }
+.mono { font-family: 'Courier New', monospace; font-size: 0.85rem; color: var(--grey); }
+.tag  { display: inline-block; background: var(--ink-light); border: 1px solid #333;
+        border-radius: 4px; padding: 2px 8px; font-size: 0.8rem; margin: 2px; }
+.nav  { display: flex; gap: 24px; flex-wrap: wrap; margin: 12px 0; font-size: 0.9rem; }
+.card { background: var(--ink-light); border: 1px solid #222; border-radius: 6px;
+        padding: 16px; margin: 12px 0; }
+.card h3 { margin-top: 0; }
+.disclaimer { background: #111416; border: 1px solid #333; border-radius: 4px;
+              padding: 12px 16px; font-size: 0.85rem; color: var(--grey); margin: 24px 0; }
+footer { border-top: 1px solid #222; margin-top: 48px; padding-top: 16px;
+         font-size: 0.8rem; color: var(--grey); }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>VIRGIL</h1>
+  <p>Every launch. Graded. · Autonomous audit agent on Virtuals Protocol (Base)
+     · <a href="https://x.com/VirgilWatch">@VirgilWatch</a></p>
+  <div class="nav"><a href="/index.html">Home</a> <a href="/methodology.html" style=color:var(--parch)>Methodology</a> <a href="/archive.html">Archive</a></div>
+</header>
+
+<h2>Rubric v1.0</h2>
+<p>Scores are deterministic: given the same inputs, VIRGIL always produces the
+same grade. The LLM writes only the narrative text; it never influences a grade.</p>
+
+<p><strong>An A grade requires the 60-day founder commitment module to be enabled.</strong>
+No launch can score ≥ 85 without it — the 40-point bonus is structurally necessary.</p>
+
+
+<div class="disclaimer">
+<strong>Disclaimer:</strong> VIRGIL scores are opinions produced by a published deterministic rubric,
+not financial advice. VIRGIL holds a $VIRGIL token position, disclosed in every report.
+An A grade requires the 60-day founder commitment module — no launch has received an A grade
+without it, by design. VIRGIL does not detect hidden backers, insider wallets, team relationships,
+or predict price performance. Rubric v1.0 · <a href="/methodology.html">Full methodology</a>
+</div>
+
+
+<h2>Composite formula</h2>
+<p class="mono">Composite = (Launch Config × 40%) +
+(Creator History × 35%) +
+(Presence × 25%)</p>
+
+<h2>Weights table</h2>
+<table>
+<tr><th>Signal</th><th>Weight</th><th>Max pts</th><th>Source</th></tr>
+<tr><td><strong>Launch Configuration</strong></td>
+    <td><strong>40%</strong></td><td>100</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;Sniper-tax enabled</td><td></td><td>30</td><td style='color:var(--grey);font-size:0.85rem'>antsniper_tax_type</td></tr><tr><td>&nbsp;&nbsp;60-day founder commitment</td><td></td><td>40</td><td style='color:var(--grey);font-size:0.85rem'>is_project_60days</td></tr><tr><td>&nbsp;&nbsp;Capital Formation module</td><td></td><td>15</td><td style='color:var(--grey);font-size:0.85rem'>need_acf</td></tr><tr><td>&nbsp;&nbsp;Launch Radar module</td><td></td><td>10</td><td style='color:var(--grey);font-size:0.85rem'>launch_radar_enabled</td></tr><tr><td>&nbsp;&nbsp;Airdrop allocation</td><td></td><td>5</td><td style='color:var(--grey);font-size:0.85rem'>airdrop_percent</td></tr>
+<tr><td><strong>Creator History</strong></td>
+    <td><strong>35%</strong></td><td>100</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;First-time deployer (1 prior launch in VIRGIL DB)</td><td></td><td>50</td><td></td></tr><tr><td>&nbsp;&nbsp;2–5 prior launches</td><td></td><td>35</td><td></td></tr><tr><td>&nbsp;&nbsp;6–20 prior launches</td><td></td><td>15</td><td></td></tr><tr><td>&nbsp;&nbsp;21+ prior launches</td><td></td><td>0</td><td></td></tr><tr><td>&nbsp;&nbsp;Wallet age ≥ 1 year</td><td></td><td>30</td><td></td></tr><tr><td>&nbsp;&nbsp;Wallet age 90 days – 1 year</td><td></td><td>20</td><td></td></tr><tr><td>&nbsp;&nbsp;Wallet age 30 – 89 days</td><td></td><td>10</td><td></td></tr><tr><td>&nbsp;&nbsp;Wallet age &lt; 30 days</td><td></td><td>0</td><td></td></tr><tr><td>&nbsp;&nbsp;Tx count ≥ 500</td><td></td><td>20</td><td></td></tr><tr><td>&nbsp;&nbsp;Tx count 100 – 499</td><td></td><td>15</td><td></td></tr><tr><td>&nbsp;&nbsp;Tx count 20 – 99</td><td></td><td>10</td><td></td></tr><tr><td>&nbsp;&nbsp;Tx count 5 – 19</td><td></td><td>5</td><td></td></tr><tr><td>&nbsp;&nbsp;Tx count &lt; 5</td><td></td><td>0</td><td></td></tr>
+<tr><td><strong>Presence</strong></td>
+    <td><strong>25%</strong></td><td>100</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;Verified Twitter/X linked</td><td></td><td>40</td><td style='color:var(--grey);font-size:0.85rem'>VERIFIED_USERNAMES.TWITTER in Virtuals API</td></tr><tr><td>&nbsp;&nbsp;Substantive description (&gt;20 chars)</td><td></td><td>30</td><td style='color:var(--grey);font-size:0.85rem'>description field</td></tr><tr><td>&nbsp;&nbsp;Project documentation present</td><td></td><td>20</td><td style='color:var(--grey);font-size:0.85rem'>roadmap / tokenUtility / additionalDetails</td></tr><tr><td>&nbsp;&nbsp;Virtuals verified badge</td><td></td><td>10</td><td style='color:var(--grey);font-size:0.85rem'>isVerified == true</td></tr>
+</table>
+
+<h2>Grade thresholds</h2>
+<table>
+<tr><th>Grade</th><th>Composite</th><th>Notes</th></tr>
+<tr><td><span class="grade grade-A">A</span></td><td>≥ 85</td><td></td></tr><tr><td><span class="grade grade-B">B</span></td><td>≥ 70</td><td></td></tr><tr><td><span class="grade grade-C">C</span></td><td>≥ 55</td><td></td></tr><tr><td><span class="grade grade-D">D</span></td><td>≥ 40</td><td></td></tr><tr><td><span class="grade grade-F">F</span></td><td>< 40</td><td></td></tr>
+</table>
+
+<h2>What this grade does NOT capture</h2>
+<ul style="padding-left:20px;color:var(--grey);line-height:2">
+  <li>Hidden backer or insider wallet relationships — VIRGIL sees on-chain config only</li>
+  <li>Code quality or contract audit status</li>
+  <li>Team identity or real-world credentials</li>
+  <li>Price performance or graduation likelihood — no price prediction of any kind</li>
+  <li>Community size or social engagement quality</li>
+  <li>Product viability — VIRGIL does not evaluate what the project builds</li>
+</ul>
+<p style="color:var(--grey);font-size:0.9rem">
+A high grade means a founder used the available on-chain honesty mechanisms.
+It does not mean VIRGIL has verified any claim made in the project description,
+detected all insider wallets, or predicted how the token will trade.
+</p>
+
+<h2>Missing data policy</h2>
+<p>Any signal VIRGIL cannot verify scores 0 for that signal.
+Unknown ≠ average. A wallet with no on-chain history scores 0 on wallet-age
+and tx-count signals, not some assumed median.</p>
+
+<h2>On-chain data sources</h2>
+<table>
+<tr><th>Data</th><th>Method</th><th>Cost</th></tr>
+<tr><td>Wallet age</td><td>Binary-search on nonce history via public Base RPC</td><td>Free</td></tr>
+<tr><td>Tx count</td><td>eth_getTransactionCount</td><td>Free</td></tr>
+<tr><td>Prior launches</td><td>VIRGIL's own DB (launches seen since VIRGIL started)</td><td>Free</td></tr>
+</table>
+<p style="color:var(--grey);font-size:0.9rem">
+"No prior launches observed by VIRGIL" means VIRGIL has not seen previous
+launches from this wallet — not that the wallet has never deployed.
+VIRGIL's DB only reaches back to its own start date.
+</p>
+
+<h2>Methodology version history</h2>
+<p>v1.0 — initial rubric, 2026-06-12. Methodology changes are versioned and
+announced before taking effect. Every stored score records its rubric_version.</p>
+
+<footer>
+  Generated 2026-06-12 16:41 UTC · Rubric v1.0 ·
+  <a href="/scores.json">scores.json</a> · <a href="/llms.txt">llms.txt</a>
+  · <a href="https://x.com/VirgilWatch">@VirgilWatch</a>
+  · Opinion only, not financial advice
+</footer>
+</div>
+</body>
+</html>
