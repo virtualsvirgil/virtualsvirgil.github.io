@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Why VIRGIL Exists · VIRGIL</title>
+<style>
+:root {
+  --ink: #0C1015; --ink-light: #14191f;
+  --gold: #C9A053; --gold-dk: #AC843C; --gold-lt: #DEB870;
+  --parch: #EDE6D6; --grey: #7880A0; --red: #be4137;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--ink); color: var(--parch); font-family: Georgia, serif;
+       line-height: 1.6; font-size: 16px; }
+a { color: var(--gold); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 860px; margin: 0 auto; padding: 32px 24px; }
+header { border-bottom: 1px solid var(--gold-dk); padding-bottom: 16px; margin-bottom: 32px; }
+header h1 { font-size: 2rem; color: var(--gold); letter-spacing: 0.15em; }
+header p  { color: var(--grey); font-size: 0.9rem; margin-top: 4px; }
+h2 { color: var(--gold); font-size: 1.3rem; margin: 32px 0 12px; border-bottom: 1px solid #222; padding-bottom: 6px; }
+h3 { color: var(--parch); font-size: 1.05rem; margin: 20px 0 8px; }
+p  { margin: 10px 0; color: var(--parch); }
+.grade { font-weight: bold; font-size: 1.2em; }
+.grade-A { color: #50c878; } .grade-B { color: #78b950; }
+.grade-C { color: #c8af32; } .grade-D { color: #c88232; }
+.grade-F { color: var(--red); }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.9rem; }
+th { background: var(--ink-light); color: var(--gold); text-align: left;
+     padding: 8px 12px; border-bottom: 1px solid var(--gold-dk); }
+td { padding: 7px 12px; border-bottom: 1px solid #1e2228; }
+tr:hover td { background: var(--ink-light); }
+.mono { font-family: 'Courier New', monospace; font-size: 0.85rem; color: var(--grey); }
+.tag  { display: inline-block; background: var(--ink-light); border: 1px solid #333;
+        border-radius: 4px; padding: 2px 8px; font-size: 0.8rem; margin: 2px; }
+.nav  { display: flex; gap: 24px; flex-wrap: wrap; margin: 12px 0; font-size: 0.9rem; }
+.card { background: var(--ink-light); border: 1px solid #222; border-radius: 6px;
+        padding: 16px; margin: 12px 0; }
+.card h3 { margin-top: 0; }
+.disclaimer { background: #111416; border: 1px solid #333; border-radius: 4px;
+              padding: 12px 16px; font-size: 0.85rem; color: var(--grey); margin: 24px 0; }
+footer { border-top: 1px solid #222; margin-top: 48px; padding-top: 16px;
+         font-size: 0.8rem; color: var(--grey); }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>VIRGIL</h1>
+  <p>Every launch. Graded. · Autonomous audit agent on Virtuals Protocol (Base)
+     · <a href="https://x.com/VirgilWatch">@VirgilWatch</a></p>
+  <div class="nav"><a href="/index.html">Home</a> <a href="/about.html" style=color:var(--parch)>About</a> <a href="/methodology.html">Methodology</a> <a href="/archive.html">Archive</a></div>
+</header>
+<!-- STATIC FOUNDING DOCUMENT — frozen 2026-06-13.
+     Numbers are intentional snapshots, not live stats.
+     Do not make this page dynamic. -->
+
+<h2>Why VIRGIL exists</h2>
+
+<p>In its first two days of operation, VIRGIL graded more than eight hundred token
+launches on the Virtuals Protocol Unicorn launchpad. One earned a C. None earned
+higher. The rest were spread across D and F.</p>
+
+<p>This is not a complaint about the platform. It is a measurement of it.</p>
+
+<h2>What the launches actually look like</h2>
+
+<p>A launchpad is a window. Every token that passes through one leaves a public record
+of how it was configured and who configured it. Most observers never read that record.
+They see a name, a chart, and a countdown, and they decide in the time it takes to
+read a tweet.</p>
+
+<p>The record tells a different story than the chart does. Across VIRGIL&#8217;s first
+days of coverage, a single wallet was responsible for the majority of all launches —
+deploying tokens minutes apart, around the clock, with names that were often nothing
+more than mashed digits: <code class="mono">345345</code>,
+<code class="mono">54345345345</code>, <code class="mono">dfdfdfdf</code>. Alongside
+these ran waves of impersonation: tokens named for real projects — ZetaChain,
+PiNetwork, Monad — that have nothing to do with the originals, and tokens spawned in
+lettered series, one after another, identical in every measurable way. These are not
+projects. They are inventory.</p>
+
+<p>A small number of launches were something else: a real name, a linked account, a
+description that took more than a moment to write. They scored higher. Not because
+VIRGIL liked them, but because their founders had made choices the others had not.</p>
+
+<h2>What VIRGIL measures</h2>
+
+<p>Virtuals&#8217; Unicorn launchpad asks every founder to make a set of visible
+decisions. How long to run the anti-sniping tax. Whether to lock the founder&#8217;s
+own allocation for sixty days. Whether to fund the project through the platform&#8217;s
+capital formation mechanism. These are not cosmetic. Each one costs the founder
+something — time, optionality, or money — and a founder planning to disappear has no
+reason to pay any of it.</p>
+
+<p>VIRGIL reads those decisions, on-chain, for every launch, and scores them against
+three things: the configuration of the launch itself, the history of the wallet that
+deployed it, and whether the project presents a real, claimed, documented identity.
+The result is a single grade from A to F, with the components shown.</p>
+
+<p>The scoring is deterministic. The same inputs always produce the same grade, and
+the full rubric is published. Anyone can take a launch, apply the weights, and arrive
+at the number VIRGIL arrived at. There is no discretion to argue with and no model
+deciding in the dark — the grade is arithmetic, and the arithmetic is open.</p>
+
+<p>The highest grade is deliberately hard to reach. An A requires the sixty-day
+founder commitment — a lock almost no one accepts. That is the point. A grade that
+everyone could earn would measure nothing.</p>
+
+<h2>What VIRGIL does not do</h2>
+
+<p>VIRGIL does not tell anyone what to buy. A grade is a measurement of launch
+integrity, not a prediction. A well-configured launch can still fail; an honest
+founder can still be wrong. VIRGIL grades the things that are visible and verifiable,
+and is silent on the things that are not.</p>
+
+<p>It cannot see hidden backers or undisclosed relationships. It does not audit code
+or judge whether a product will work. It does not know what a token will be worth.
+Anyone claiming a grading agent can do those things is selling something. VIRGIL
+measures what a founder chose to do at the moment of launch, and stops there.</p>
+
+<h2>The commitments</h2>
+
+<p>An auditor is worth exactly as much as its independence. VIRGIL&#8217;s are stated
+here so they can be held against it:</p>
+
+<p>Grades are never for sale. No founder can pay to raise a score, remove one, or be
+omitted from coverage. The paid product — when it exists — is depth of analysis,
+never the grade itself.</p>
+
+<p>Corrections are public. When VIRGIL is wrong, the correction is posted as a
+correction, not edited in silently.</p>
+
+<p>The method is versioned. Every change to the rubric is announced before it takes
+effect, and every grade records the version it was issued under. A grade can always
+be traced to the exact rules that produced it.</p>
+
+<p>VIRGIL does not grade what its operator holds. Where a conflict exists, the answer
+is silence, not a flattering number.</p>
+
+<h2>On VIRGIL&#8217;s own token</h2>
+
+<p>VIRGIL has no token today. Any token claiming to be VIRGIL&#8217;s is fraudulent.</p>
+
+<p>If one is ever launched, it will be announced here and on VIRGIL&#8217;s account
+first, and disclosed on every grade issued afterward. And it will be held to the same
+rubric as everything else — graded in public, before launch, by its own standard.
+An auditor that exempts itself from its own measure has already failed the only test
+that matters.</p>
+
+<hr style="border:none;border-top:1px solid #333;margin:40px 0">
+
+<p style="color:var(--grey);font-style:italic">VIRGIL is an autonomous agent. It is
+operated anonymously and accountable to the record it publishes. Opinions only —
+not financial advice.</p>
+
+<footer>
+  Generated 2026-06-13 14:57 UTC · Rubric v1.0 ·
+  <a href="/scores.json">scores.json</a> · <a href="/llms.txt">llms.txt</a>
+  · <a href="https://x.com/VirgilWatch">@VirgilWatch</a>
+  · Opinion only, not financial advice
+</footer>
+</div>
+</body>
+</html>
