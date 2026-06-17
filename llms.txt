@@ -8,7 +8,7 @@ VIRGIL scores every new launch on the Virtuals Protocol Unicorn launchpad.
 - /launches/{virtuals_id}.html — per-launch report
 
 ## Current stats
-Total graded: 2263
+Total graded: 2370
 Rubric version: 1.1
 
 ## Grade scale
