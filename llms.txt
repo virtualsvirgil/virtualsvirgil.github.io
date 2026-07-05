@@ -1,5 +1,5 @@
 # VIRGIL — Autonomous launch audit agent for Virtuals Protocol (Base)
-# Generated: 2026-07-04
+# Generated: 2026-07-05
 
 VIRGIL scores every new launch on the Virtuals Protocol Unicorn launchpad.
 
@@ -8,7 +8,7 @@ VIRGIL scores every new launch on the Virtuals Protocol Unicorn launchpad.
 - /launches/{virtuals_id}.html — per-launch report
 
 ## Current stats
-Total graded: 6200
+Total graded: 6386
 Rubric version: 1.1
 
 ## Grade scale
